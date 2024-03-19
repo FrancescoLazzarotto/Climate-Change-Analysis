@@ -14,7 +14,7 @@ Text-Mining Pipeline: The project implements a robust text-mining pipeline that 
 
 Sentiment Analysis: Utilizing state-of-the-art sentiment analysis techniques, the model categorizes tweets into positive, negative, or neutral sentiments, providing a nuanced perspective on public opinions.
 
-Data Integration: The project integrates diverse datasets, combining social media data with authoritative climate change statistics. This holistic approach enables a more comprehensive analysis of the relationship between public sentiment and actual climate change data.
+Data Integration: The project integrates diverse datasets, combining social media data with authoritative climate change statistics. This holistic approach enables a more comprehensive analysis of the relationship between public sentiment and actual climate change data. -- Right now I am exploring this kaggle dataset and learning how to re-hydrate tweets from their Ids with Twarc. (https://www.kaggle.com/datasets/deffro/the-climate-change-twitter-dataset)
 
 
 Contact:
