@@ -18,5 +18,5 @@ Data Integration: The project integrates diverse datasets, combining social medi
 
 
 Contact:
-Please feel free to reach out to me via email at checcolazzarotto@gmail.com.
+email: francesco.lazzarotto@edu.unito.it
 
