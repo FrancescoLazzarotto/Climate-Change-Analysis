@@ -19,7 +19,9 @@ Data Integration: The project integrates diverse datasets, combining social medi
 
 Files: 
 
--Preprocessing.py is the script I am using to preprocess data.
+-Preprocessing.py is the script I am using to preprocess data (NLTK).
+
+-preprocessingspacy.py is the script I am using to preprocess data (SpaCy).
 
 -suddividi.py is the script I used to separate the reddit dataset in 5 different dataset to split the work on my machine.
 
