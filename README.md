@@ -17,6 +17,15 @@ Sentiment Analysis: Utilizing state-of-the-art sentiment analysis techniques, th
 Data Integration: The project integrates diverse datasets, combining social media data with authoritative climate change statistics. This holistic approach enables a more comprehensive analysis of the relationship between public sentiment and actual climate change data. -- 
 
 
+Files: 
+
+-Preprocessing.py is the script I am using to preprocess data.
+
+-suddividi.py is the script I used to separate the reddit dataset in 5 different dataset to split the work on my machine.
+
+-twarc.py is the script (https://twarc-project.readthedocs.io/en/latest/twarc2_en_us/) I am trying to use to re-hydrate some tweerìts from this dataset 
+(https://www.kaggle.com/datasets/deffro/the-climate-change-twitter-dataset) ... I guess it isn't working anymore after the changing at the twitter API.
+
 Currently, preprocessing is being performed on two different datasets (https://www.kaggle.com/datasets/pavellexyr/the-reddit-climate-change-dataset) (https://www.kaggle.com/datasets/edqian/twitter-climate-change-sentiment-dataset) using the NLTK and SpaCy libraries in Python.
 The next step will probably be some topic anlysis using BerTOPIC (https://huggingface.co/MaartenGr/BERTopic_ArXiv/tree/main)
 
