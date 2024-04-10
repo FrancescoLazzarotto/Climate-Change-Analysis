@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import io
 
 # carico il dataset
-file_csv = os.path.join(os.path.expanduser('~'),'OneDrive', 'Desktop', 'tokyo.csv')
+file_csv = os.path.join(os.path.expanduser('~'),'OneDrive', 'Desktop', '')
 
 try:
     df = pd.read_csv(file_csv, engine='python')
@@ -26,7 +26,6 @@ model.save("modello1prova")
 output_file = os.path.join(os.path.expanduser('~'),'onedrive', 'Desktop', 'output', 'resultsv1.2.txt')
 
 with open(output_file, "w") as f:
-    # Scrivi i risultati dei topic su file
     f.write("Topic Analysis Results:\n\n")
     for topic_id, keywords in model.get_topics().items():
         f.write(f"Topic {topic_id}:\n")
@@ -41,7 +40,7 @@ def plot_topic_distribution(topics):
     plt.xlabel('Topic')
     plt.ylabel('Number of Documents')
     plt.title('Topic Distribution')
-    plt.savefig("topic_distribution.png")  # Salva il grafico come immagine
+    plt.savefig("topic_distribution.png") 
     plt.close()
 
 def plot_topic_keywords(model):
