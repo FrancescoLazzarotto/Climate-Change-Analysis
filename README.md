@@ -25,8 +25,7 @@ Files:
 
 -suddividi.py is the script I used to separate the reddit dataset in 5 different dataset to split the work on my machine.
 
--twarc.py is the script (https://twarc-project.readthedocs.io/en/latest/twarc2_en_us/) I am trying to use to re-hydrate some tweerìts from this dataset 
-(https://www.kaggle.com/datasets/deffro/the-climate-change-twitter-dataset) ... I guess it isn't working anymore after the changing at the twitter API.
+-topicmodelv2.3.py is the script I am using to train the BerTopic model for topic analysis.
 
 Currently, preprocessing is being performed on two different datasets (https://www.kaggle.com/datasets/pavellexyr/the-reddit-climate-change-dataset) (https://www.kaggle.com/datasets/edqian/twitter-climate-change-sentiment-dataset) using the NLTK and SpaCy libraries in Python.
 The next step will probably be some topic anlysis using BerTOPIC (https://huggingface.co/MaartenGr/BERTopic_ArXiv/tree/main)
