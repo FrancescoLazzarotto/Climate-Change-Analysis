@@ -1,29 +1,39 @@
 import os
-from bertopic import BERTopic
 import pandas as pd
 import matplotlib.pyplot as plt
-import io
+from bertopic import BERTopic
 
-# carico il dataset
-file_csv = os.path.join(os.path.expanduser('~'),'OneDrive', 'Desktop', '')
+#carica il dataset
+file_csv = os.path.join(os.path.expanduser('~'),'OneDrive', 'Desktop', 'reddit-parte-4-v1.2.csv')
+file_csv2 = os.path.join(os.path.expanduser('~'),'OneDrive', 'Desktop', 'twitterv1.5_preprocessato.csv')
 
 try:
-    df = pd.read_csv(file_csv, engine='python')
+    df1 = pd.read_csv(file_csv, engine='python')
+    df2 = pd.read_csv(file_csv2, engine='python')
     print("Dataset trovato")
 except FileNotFoundError:
     print(file_csv)
     print("File non trovato")
     exit()  
 
-# addestramento modello
-docs = df[0:10000].text.to_list()
-model = BERTopic(verbose=True)
+#unisco i due dataset
+df = pd.concat([df1, df2], ignore_index=True)
+
+#verifica se la colonna 'testo_preprocessato' esiste nel DataFrame
+if 'testo_preprocessato' not in df.columns:
+    print("La colonna 'testo_preprocessato' non è presente nel DataFrame.")
+    exit()
+
+#addestramento del modello
+docs = df['testo_preprocessato'].tolist() 
+model = BERTopic(verbose=True, nr_topics="auto")
 topics, probabilities = model.fit_transform(docs)
 
-model.save("modello1prova") 
+#salva il modello addestrato
+model.save("modello_twitter_provav1.6") 
 
-# file di output per le keyword scritte
-output_file = os.path.join(os.path.expanduser('~'),'onedrive', 'Desktop', 'output', 'resultsv1.2.txt')
+#file di output per le keyword
+output_file = os.path.join(os.path.expanduser('~'),'onedrive', 'Desktop', 'output', 'resultsv1.6.txt')
 
 with open(output_file, "w") as f:
     f.write("Topic Analysis Results:\n\n")
@@ -33,14 +43,14 @@ with open(output_file, "w") as f:
             f.write(f"- {keyword}: {importance}\n")
         f.write("\n")
 
-# visualizzazione dei risultati
+
 def plot_topic_distribution(topics):
     topic_counts = pd.Series(topics).value_counts().sort_index()
     plt.bar(topic_counts.index, topic_counts.values)
     plt.xlabel('Topic')
     plt.ylabel('Number of Documents')
     plt.title('Topic Distribution')
-    plt.savefig("topic_distribution.png") 
+    plt.savefig("topic_distribution.png")  
     plt.close()
 
 def plot_topic_keywords(model):
@@ -54,12 +64,8 @@ def plot_topic_keywords(model):
         plt.savefig(f"topic_{topic_id}_keywords.png")  
         plt.close()
 
-
-# chiamate delle funzioni
+# Chiamate delle funzioni
 plot_topic_distribution(topics)
 plot_topic_keywords(model)
 
-# chiamate funzioni bertopic di visualizzazione
-model.visualize_barchart()
-model.visualize_topics()
-model.visualize_heatmap()
+
