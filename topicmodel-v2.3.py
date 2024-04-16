@@ -64,7 +64,7 @@ def plot_topic_keywords(model):
         plt.savefig(f"topic_{topic_id}_keywords.png")  
         plt.close()
 
-# Chiamate delle funzioni
+#chiamate delle funzioni grafiche
 plot_topic_distribution(topics)
 plot_topic_keywords(model)
 
