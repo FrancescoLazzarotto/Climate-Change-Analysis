@@ -43,12 +43,13 @@ with open(output_file, "w") as f:
             f.write(f"- {keyword}: {importance}\n")
         f.write("\n")
 
-
+#funzioni per grafici e chiamate di funzioni
 def plot_topic_distribution(topics):
     topic_counts = pd.Series(topics).value_counts().sort_index()
     plt.bar(topic_counts.index, topic_counts.values)
+    plt.axis
     plt.xlabel('Topic')
-    plt.ylabel('Number of Documents')
+    plt.ylabel('Number of Document')
     plt.title('Topic Distribution')
     plt.savefig("topic_distribution.png")  
     plt.close()
@@ -64,7 +65,7 @@ def plot_topic_keywords(model):
         plt.savefig(f"topic_{topic_id}_keywords.png")  
         plt.close()
 
-#chiamate delle funzioni grafiche
+
 plot_topic_distribution(topics)
 plot_topic_keywords(model)
 
