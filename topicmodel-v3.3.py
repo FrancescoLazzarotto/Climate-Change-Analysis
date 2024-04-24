@@ -2,6 +2,12 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 from bertopic import BERTopic
+from bertopic.vectorizers import ClassTfidfTransformer
+from umap import UMAP
+from bertopic.representation import KeyBERTInspired
+from bertopic.representation import MaximalMarginalRelevance
+
+
 
 #carica il dataset
 file_csv = os.path.join(os.path.expanduser('~'),'OneDrive', 'Desktop', 'reddit-parte-4-v1.2.csv')
@@ -26,7 +32,10 @@ if 'testo_preprocessato' not in df.columns:
 
 #addestramento del modello
 docs = df['testo_preprocessato'].tolist() 
-model = BERTopic(verbose=True, nr_topics="auto")
+umap_model = UMAP(n_neighbors=15, n_components=5, min_dist=0.0, metric='cosine')
+ctfidf_model = ClassTfidfTransformer()
+representation_model = KeyBERTInspired().MaximalMarginalRelevance(diversity=0.3)
+model = BERTopic(verbose=True, nr_topics="auto", ctfidf_model=ctfidf_model, umap_model=umap_model, representation_model=representation_model)
 topics, probabilities = model.fit_transform(docs)
 
 #salva il modello addestrato
