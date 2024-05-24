@@ -1,12 +1,15 @@
 # Climate-Change-Analysis
 
-Research Project: ClimateChangeSentiments
+Research Project Title: 
+IT - Social Media e Cambiamento Climatico: Topic Modeling e Sentiment Analysis di Discussioni Online sull'Ambiente
+EN - Social Media and Climate Change: Topic Modeling and Sentiment Analysis of Online Discussions on the Environment
+
 
 Introduction:
 This repository hosts the code and documentation for my ongoing research project focused on sentiment analysis and text-mining within the context of climate change discourse. The project integrates innovative approaches to analyze opinions expressed on social media platforms, particularly Twitter and Reddit, regarding the topic of climate change.
 
 Objective:
-The primary objective is to develop an advanced text-mining model capable of extracting valuable insights from large-scale datasets of climate change-related tweets. By leveraging natural language processing (NLP) techniques and sentiment analysis, the project aims to understand public sentiments, identify key themes, and contribute to a comprehensive understanding of the ongoing discourse surrounding climate change.
+The primary objective is to develop a text-mining model capable of extracting valuable insights from large-scale datasets of climate change-related tweets and reddit posts/comments. By leveraging natural language processing (NLP) techniques and sentiment analysis, the project aims to understand public sentiments, identify key themes, and contribute to a comprehensive understanding of the ongoing discourse surrounding climate change.
 
 Key Features:
 Text-Mining Pipeline: The project implements a robust text-mining pipeline that includes data collection, preprocessing, sentiment analysis, topic analysis and visualization components.
