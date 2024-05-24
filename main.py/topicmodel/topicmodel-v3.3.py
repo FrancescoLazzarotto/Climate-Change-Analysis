@@ -77,8 +77,3 @@ def plot_topic_keywords(model):
 plot_topic_distribution(topics)
 plot_topic_keywords(model)
 
-
-"""
-Levallois, C., Clithero, J. A., Wouters, P., Smidts, A., & Huettel, S. A. (2012). Translating upwards: linking the neural and social sciences via neuroeconomics.
-Nature Reviews Neuroscience, 13(11), 789-797.
-"""
