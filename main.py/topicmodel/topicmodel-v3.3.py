@@ -9,20 +9,16 @@ from bertopic.representation import KeyBERTInspired
 from bertopic.representation import MaximalMarginalRelevance
 
 #carica il dataset
-file_csv = os.path.join(os.path.expanduser('~'),'OneDrive', 'Desktop', 'reddit-parte-4-v1.2.csv')
-file_csv2 = os.path.join(os.path.expanduser('~'),'OneDrive', 'Desktop', 'twitterv1.5_preprocessato.csv')
+file_csv = os.path.join(os.path.expanduser('~'),'OneDrive', 'Desktop', 'corpus.csv')
+
 
 try:
-    df1 = pd.read_csv(file_csv, engine='python')
-    df2 = pd.read_csv(file_csv2, engine='python')
+    df = pd.read_csv(file_csv, engine='python')
     print("Dataset trovato")
 except FileNotFoundError:
     print(file_csv)
     print("File non trovato")
     exit()  
-
-#unisco i due dataset
-df = pd.concat([df1, df2], ignore_index=True)
 
 #verifica se la colonna 'testo_preprocessato' esiste nel DataFrame
 if 'testo_preprocessato' not in df.columns:
@@ -38,7 +34,7 @@ model = BERTopic(verbose=True, nr_topics="auto", ctfidf_model=ctfidf_model, umap
 topics, probabilities = model.fit_transform(docs)
 
 #salva il modello addestrato
-model.save("modello_twitter_provav1.6") 
+model.save("topic_modeling") 
 
 #file di output per le keyword
 output_file = os.path.join(os.path.expanduser('~'),'onedrive', 'Desktop', 'output', 'resultsv1.6.txt')
