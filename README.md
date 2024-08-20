@@ -1,5 +1,5 @@
 # Climate-Change-Analysis
-
+https://www.researchgate.net/publication/382276925_Social_Media_e_Cambiamento_Climatico_Topic_Modeling_e_Sentiment_Analysis_di_Discussioni_Online_sull'Ambiente
 Research Project Title: 
 IT - Social Media e Cambiamento Climatico: Topic Modeling e Sentiment Analysis di Discussioni Online sull'Ambiente
 EN - Social Media and Climate Change: Topic Modeling and Sentiment Analysis of Online Discussions on the Environment
