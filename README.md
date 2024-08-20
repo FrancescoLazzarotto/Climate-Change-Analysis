@@ -1,9 +1,16 @@
 # Climate-Change-Analysis
+
+DOI: 10.13140/RG.2.2.25839.65440
+
+
+
+Project link: 
 https://www.researchgate.net/publication/382276925_Social_Media_e_Cambiamento_Climatico_Topic_Modeling_e_Sentiment_Analysis_di_Discussioni_Online_sull'Ambiente
-Research Project Title: 
+
+
+Project Title: 
 IT - Social Media e Cambiamento Climatico: Topic Modeling e Sentiment Analysis di Discussioni Online sull'Ambiente
 EN - Social Media and Climate Change: Topic Modeling and Sentiment Analysis of Online Discussions on the Environment
-
 
 Introduction:
 This repository hosts the code and documentation for my ongoing research project focused on sentiment analysis and text-mining within the context of climate change discourse. The project integrates innovative approaches to analyze opinions expressed on social media platforms, particularly Twitter and Reddit, regarding the topic of climate change.
