@@ -14,7 +14,7 @@
 
 ## Introduction
 
-This repository hosts the code and documentation for an ongoing research project focused on sentiment analysis and text mining within the context of climate change discourse.  
+This repository hosts the code and documentation for a thesis research project focused on sentiment analysis and text mining within the context of climate change discourse.  
 It applies innovative approaches to analyze opinions expressed on social media platforms, particularly Twitter and Reddit, regarding climate-related topics.
 
 ---
